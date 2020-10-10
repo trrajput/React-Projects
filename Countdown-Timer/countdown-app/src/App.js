@@ -5,7 +5,9 @@ function App() {
   return (
     <div className="App background">
       <header className="App-header">
-        All well
+        <h1 className="title">
+          Counting down to reboot life in...
+        </h1>
       </header>
     </div>
   );
