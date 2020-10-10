@@ -10,93 +10,124 @@ export class index extends Component {
 
   render() {
     return (
-      <div style={{ backgroundColor: '#000000', color: '#fff' }}>
-        <Row type="flex" justify="center">
+      <div style={{ backgroundColor: '#000000', color: '#fff', maxWidth: '100vw' }}>
+        <Row>
           <Col lg={24}>
-            <div
-              style={{
-                display: 'flex',
-                justifyContent: 'center',
-                fontSize: '28px',
-                marginTop: '20px',
-              }}
-            >
-              Movies 2020
-            </div>
-          </Col>
-        </Row>
-
-        <Row style={{ marginTop: '30px' }}>
-          <Col span={4} offset={2}>
-            <Card
-              onClick={() => {}}
-              hoverable
-              style={{ width: 200 }}
-              cover={
-                <img
-                  alt="example"
-                  src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png"
-                />
-              }
-            >
-              <Meta title="Arrival" description="8.4" />
-            </Card>
-          </Col>
-          <Col span={4}>
-            <Card
-              hoverable
-              style={{ width: 200 }}
-              cover={
-                <img
-                  alt="example"
-                  src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png"
-                />
-              }
-            >
-              <Meta title="Arrival" description="8.4" />
-            </Card>
-          </Col>
-          <Col span={4}>
-            <Card
-              hoverable
-              style={{ width: 200 }}
-              cover={
-                <img
-                  alt="example"
-                  src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png"
-                />
-              }
-            >
-              <Meta title="Arrival" description="8.4" />
-            </Card>
-          </Col>
-          <Col span={4}>
-            <Card
-              hoverable
-              style={{ width: 200 }}
-              cover={
-                <img
-                  alt="example"
-                  src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png"
-                />
-              }
-            >
-              <Meta title="Arrival" description="8.4" />
-            </Card>
-          </Col>
-          <Col span={4}>
-            <Card
-              hoverable
-              style={{ width: 200 }}
-              cover={
-                <img
-                  alt="example"
-                  src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png"
-                />
-              }
-            >
-              <Meta title="Arrival" description="8.4" />
-            </Card>
+            <Row type="flex" justify="center">
+              <Col lg={24}>
+                <div
+                  style={{
+                    display: 'flex',
+                    justifyContent: 'center',
+                    fontSize: '28px',
+                    marginTop: '20px',
+                  }}
+                >
+                  Movies 2020
+                </div>
+              </Col>
+            </Row>
+            <Row style={{ marginTop: '30px' }} gutter={[0, 48]}>
+              <Col xs={24} sm={24} md={6} lg={6}>
+                <Card
+                  onClick={() => {}}
+                  style={{ marginLeft: '25px', marginRight: '25px' }}
+                  hoverable
+                  cover={
+                    <img
+                      alt="example"
+                      src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png"
+                    />
+                  }
+                >
+                  <Meta title="Arrival" description="8.4" />
+                </Card>
+              </Col>
+              <Col xs={24} sm={24} md={6} lg={6}>
+                <Card
+                  hoverable
+                  style={{ marginLeft: '25px', marginRight: '25px' }}
+                  cover={
+                    <img
+                      alt="example"
+                      src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png"
+                    />
+                  }
+                >
+                  <Meta title="Arrival" description="8.4" />
+                </Card>
+              </Col>
+              <Col xs={24} sm={24} md={6} lg={6}>
+                <Card
+                  hoverable
+                  style={{ marginLeft: '25px', marginRight: '25px' }}
+                  cover={
+                    <img
+                      alt="example"
+                      src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png"
+                    />
+                  }
+                >
+                  <Meta title="Arrival" description="8.4" />
+                </Card>
+              </Col>
+              <Col xs={24} sm={24} md={6} lg={6}>
+                <Card
+                  hoverable
+                  style={{ marginLeft: '25px', marginRight: '25px' }}
+                  cover={
+                    <img
+                      alt="example"
+                      src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png"
+                    />
+                  }
+                >
+                  <Meta title="Arrival" description="8.4" />
+                </Card>
+              </Col>
+              <Col xs={24} sm={24} md={6} lg={6}>
+                <Card
+                  hoverable
+                  style={{ marginLeft: '25px', marginRight: '25px' }}
+                  cover={
+                    <img
+                      alt="example"
+                      src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png"
+                    />
+                  }
+                >
+                  <Meta title="Arrival" description="8.4" />
+                </Card>
+              </Col>
+              <Col xs={24} sm={24} md={6} lg={6}>
+                <Card
+                  hoverable
+                  style={{ marginLeft: '25px', marginRight: '25px' }}
+                  cover={
+                    <img
+                      alt="example"
+                      src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png"
+                    />
+                  }
+                >
+                  <Meta title="Arrival" description="8.4" />
+                </Card>
+              </Col>
+              <Col xs={24} sm={24} md={6} lg={6}>
+                <Card
+                  hoverable
+                  style={{ marginLeft: '25px', marginRight: '25px' }}
+                  cover={
+                    <img
+                      alt="example"
+                      src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png"
+                    />
+                  }
+                >
+                  <Meta title="Arrival" description="8.4" />
+                </Card>
+              </Col>
+            </Row>
           </Col>
         </Row>
       </div>
