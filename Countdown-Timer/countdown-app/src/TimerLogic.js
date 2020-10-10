@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useState } from "react";
 
 function TimerLogic({ date = "1 Jan 2021" }) {
   const calculateTimer = () => {
@@ -36,14 +36,26 @@ function TimerLogic({ date = "1 Jan 2021" }) {
 
     // Here Design or Timer
     // Interval is Days,Month like this
+
     timerDisplay.push(
-      <span>
-        {dateTimeInterval[interval]} {interval}{" "}
-      </span>
+      <div>
+        <div className="xxl_text">{dateTimeInterval[interval]}</div>
+        <div className="small_text">{interval}</div>
+      </div>
     );
   });
 
-  return <div>{timerDisplay.length && timerDisplay}</div>;
+  return (
+    <div
+      style={{
+        display: "flex",
+        justifyContent: "space-between",
+        width: "90vw",
+      }}
+    >
+      {timerDisplay.length && timerDisplay}
+    </div>
+  );
 }
 
 export default TimerLogic;
