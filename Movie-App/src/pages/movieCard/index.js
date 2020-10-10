@@ -1,16 +1,33 @@
-import React, { Component } from 'react';
-import { Row, Col, Card, Icon, PageHeader } from 'antd';
+import React, {Component} from 'react';
+import {Row, Col, Card, Rate} from 'antd';
+import {getMovies, IMAGE_PATH} from '@/api'
 
-const { Meta } = Card;
+const {Meta} = Card;
+
 export class index extends Component {
+
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      movieList: []
+    };
+  }
+
+  componentDidMount() {
+    getMovies().then(data => {
+      this.setState({
+        movieList: data
+      }, () => {
+        console.log("MOvies list==>", this.state.movieList)
+      })
+    });
+
   }
 
   render() {
+    const {movieList} = this.state;
     return (
-      <div style={{ backgroundColor: '#000000', color: '#fff', maxWidth: '100vw' }}>
+      <div style={{backgroundColor: '#000000', color: '#fff', maxWidth: '100vw'}}>
         <Row>
           <Col lg={24}>
             <Row type="flex" justify="center">
@@ -27,106 +44,36 @@ export class index extends Component {
                 </div>
               </Col>
             </Row>
-            <Row style={{ marginTop: '30px' }} gutter={[0, 48]}>
-              <Col xs={24} sm={24} md={6} lg={6}>
-                <Card
-                  onClick={() => {}}
-                  style={{ marginLeft: '25px', marginRight: '25px' }}
-                  hoverable
-                  cover={
-                    <img
-                      alt="example"
-                      src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png"
-                    />
-                  }
-                >
-                  <Meta title="Arrival" description="8.4" />
-                </Card>
-              </Col>
-              <Col xs={24} sm={24} md={6} lg={6}>
-                <Card
-                  hoverable
-                  style={{ marginLeft: '25px', marginRight: '25px' }}
-                  cover={
-                    <img
-                      alt="example"
-                      src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png"
-                    />
-                  }
-                >
-                  <Meta title="Arrival" description="8.4" />
-                </Card>
-              </Col>
-              <Col xs={24} sm={24} md={6} lg={6}>
-                <Card
-                  hoverable
-                  style={{ marginLeft: '25px', marginRight: '25px' }}
-                  cover={
-                    <img
-                      alt="example"
-                      src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png"
-                    />
-                  }
-                >
-                  <Meta title="Arrival" description="8.4" />
-                </Card>
-              </Col>
-              <Col xs={24} sm={24} md={6} lg={6}>
-                <Card
-                  hoverable
-                  style={{ marginLeft: '25px', marginRight: '25px' }}
-                  cover={
-                    <img
-                      alt="example"
-                      src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png"
-                    />
-                  }
-                >
-                  <Meta title="Arrival" description="8.4" />
-                </Card>
-              </Col>
-              <Col xs={24} sm={24} md={6} lg={6}>
-                <Card
-                  hoverable
-                  style={{ marginLeft: '25px', marginRight: '25px' }}
-                  cover={
-                    <img
-                      alt="example"
-                      src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png"
-                    />
-                  }
-                >
-                  <Meta title="Arrival" description="8.4" />
-                </Card>
-              </Col>
-              <Col xs={24} sm={24} md={6} lg={6}>
-                <Card
-                  hoverable
-                  style={{ marginLeft: '25px', marginRight: '25px' }}
-                  cover={
-                    <img
-                      alt="example"
-                      src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png"
-                    />
-                  }
-                >
-                  <Meta title="Arrival" description="8.4" />
-                </Card>
-              </Col>
-              <Col xs={24} sm={24} md={6} lg={6}>
-                <Card
-                  hoverable
-                  style={{ marginLeft: '25px', marginRight: '25px' }}
-                  cover={
-                    <img
-                      alt="example"
-                      src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png"
-                    />
-                  }
-                >
-                  <Meta title="Arrival" description="8.4" />
-                </Card>
-              </Col>
+            <Row style={{marginTop: '30px'}} gutter={[0, 48]}>
+              {movieList && movieList.length &&
+              movieList.map(movieItem => {
+                const {poster_path, title, vote_average, overview} = movieItem;
+                return (
+                  <Col xs={24} sm={24} md={6} lg={6}>
+                    <Card
+                      onClick={() => {
+                      }}
+                      style={{marginLeft: '25px', marginRight: '25px'}}
+                      hoverable
+                      cover={
+                        <img
+                          alt="example"
+                          src={`${IMAGE_PATH}${poster_path}`}
+                        />
+                      }
+                    >
+                      <Meta title={title} description={
+                        <div>
+                          <Rate defaultValue={vote_average} allowHalf count={10} disabled/>
+                          <div>
+                            {overview}
+                          </div>
+                        </div>
+                      }/>
+                    </Card>
+                  </Col>
+                )
+              })}
             </Row>
           </Col>
         </Row>
