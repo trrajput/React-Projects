@@ -1,15 +1,21 @@
-import React from 'react';
-import './App.css';
+import React from "react";
+import "./App.css";
 
+import TimerLogic from "./TimerLogic";
 function App() {
+  const date = "1 Jan 2021";
   return (
     <div className="App background">
       <header className="App-header">
-        <h1 className="title">
-          Counting down to reboot life in...
-        </h1>
-
-        <div style={{ display: 'flex', justifyContent: 'space-between', width: '90vw' }}>
+        <TimerLogic date={date} />;
+        <h1 className="title">Counting down to reboot life in...</h1>
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "space-between",
+            width: "90vw",
+          }}
+        >
           <div>
             <div className="xxl_text">2</div>
             <div className="small_text">months</div>
@@ -35,5 +41,4 @@ function App() {
     </div>
   );
 }
-
 export default App;
