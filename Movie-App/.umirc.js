@@ -5,10 +5,12 @@ export default {
   routes: [
     {
       path: '/',
-      component: '../layouts/index',
+      // component: '../layouts/index',
       routes: [
-        { path: '/', component: '../pages/index' }
-        { path: '/modal', component: '@/pages/modal' },
+
+        { path: '/', component: '../pages/index' },
+        //{ path: '/modal', component: '@/pages/modal' },
+
       ]
     }
   ],
