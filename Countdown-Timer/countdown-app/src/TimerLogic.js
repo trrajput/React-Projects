@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useState } from "react";
 
 function TimerLogic({ date = "1 Jan 2021" }) {
   const calculateTimer = () => {
