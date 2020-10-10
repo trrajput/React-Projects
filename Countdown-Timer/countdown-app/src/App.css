@@ -55,3 +55,11 @@
   font-size: 150px;
 }
 
+@media (max-width: 768px) {
+  .small_text{
+    font-size: 15px;
+  }
+  .xxl_text{
+    font-size: 100px;
+  }
+}
