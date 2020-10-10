@@ -9,7 +9,6 @@ function filterByValue(array, string) {
     Object.keys(o).some(k => o[k].toLowerCase().includes(string.toLowerCase())));
 }
 
-
 function App(props) {
   const [arrayOfRecipe, setCurrentArray] = React.useState(JSON.parse(localStorage.getItem('recipedata')) || []);
   const filterSearch = (val) => {
