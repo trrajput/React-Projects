@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Row, Col, Card, Rate} from 'antd';
+import {Row, Col, Card, Rate, Spin} from 'antd';
 import {getMovies, IMAGE_PATH} from '@/api'
 
 const {Meta} = Card;
@@ -9,23 +9,33 @@ export class index extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      movieList: []
+      movieList: [],
+      loading: true,
+      error: false,
     };
   }
 
   componentDidMount() {
     getMovies().then(data => {
       this.setState({
-        movieList: data
+        movieList: data,
+        loading: false,
       }, () => {
-        console.log("MOvies list==>", this.state.movieList)
+        console.log("Movies list from API==>", this.state.movieList)
       })
+    }).catch(e => {
+      this.setState(
+        {
+          error: true,
+          loading: false
+        })
+      console.log("Error here", e);
     });
 
   }
 
   render() {
-    const {movieList} = this.state;
+    const {movieList, error, loading} = this.state;
     return (
       <div style={{backgroundColor: '#000000', color: '#fff', maxWidth: '100vw'}}>
         <Row>
@@ -44,8 +54,24 @@ export class index extends Component {
                 </div>
               </Col>
             </Row>
+            {loading && !error &&
+            <Col
+              lg={24}
+              style={{
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                height: '100vh',
+                width: '100%'
+              }}>
+              <div className="loader-wrapper">
+                <Spin/>
+              </div>
+            </Col>
+            }
+
             <Row style={{marginTop: '30px'}} gutter={[0, 48]}>
-              {movieList && movieList.length &&
+              {movieList.length > 0 &&
               movieList.map(movieItem => {
                 const {poster_path, title, vote_average, overview} = movieItem;
                 return (
