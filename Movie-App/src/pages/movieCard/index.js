@@ -69,7 +69,21 @@ export class index extends Component {
               </div>
             </Col>
             }
-
+            {!loading && error &&
+            <Col
+              lg={24}
+              style={{
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                height: '100vh',
+                width: '100%'
+              }}>
+              <div className="loader-wrapper">
+                Error getting the data from server!
+              </div>
+            </Col>
+            }
             <Row style={{marginTop: '30px'}} gutter={[0, 48]}>
               {movieList.length > 0 &&
               movieList.map(movieItem => {
