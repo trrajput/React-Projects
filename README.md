@@ -1,4 +1,4 @@
-HacktoberfestHackDay2020
+Hacktoberfest 2020
 -------------------------
 
 Hacktoberfest 2020-Online Meetup at WebMob Technologies.
