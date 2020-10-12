@@ -76,4 +76,32 @@ function clearStatusClass(element) {
   element.classList.remove('wrong')
 }
 
-const questions = []
+const questions = [
+  {
+    question: 'What is Hactoberfest ?',
+    answers: [
+      { text: 'Competion of Coding', correct: false },
+      { text: 'Open source contrbution Event', correct: true },
+      { text: 'Technical MCQ test', correct: false },
+      { text: 'Holiday ', correct: false }
+    ]
+  },
+  {
+   question: 'Which of these is react framework ?',
+   answers: [
+     { text: 'Django', correct: false },
+     { text: 'React', correct: true },
+     { text: 'Laravel', correct: false },
+     { text: 'Code Igniter ', correct: false }
+   ]
+ },
+ {
+   question: 'In which month does hacotber comes ?',
+   answers: [
+     { text: 'January', correct: false },
+     { text: 'October', correct: true },
+     { text: 'March', correct: false },
+     { text: 'June ', correct: false }
+   ]
+ },
+]
