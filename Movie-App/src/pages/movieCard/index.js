@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Row, Col, Card, Rate, Spin} from 'antd';
+import {Row, Col, Card, Rate, Spin, Button} from 'antd';
 import {getMovies, IMAGE_PATH} from '@/api'
 
 const {Meta} = Card;
@@ -16,6 +16,11 @@ export class index extends Component {
   }
 
   componentDidMount() {
+    this.getMovieData()
+  }
+
+  getMovieData = () => {
+    console.log("Clicked")
     getMovies().then(data => {
       this.setState({
         movieList: data,
@@ -31,7 +36,6 @@ export class index extends Component {
         })
       console.log("Error here", e);
     });
-
   }
 
   render() {
@@ -77,10 +81,14 @@ export class index extends Component {
                 alignItems: 'center',
                 justifyContent: 'center',
                 height: '100vh',
-                width: '100%'
+                width: '100%',
+                zIndex: 100
               }}>
-              <div className="loader-wrapper">
-                Error getting the data from server!
+              <div style={{textAlign: 'center'}}>
+                Error getting the data from server!<br/>
+                <Button
+                  onClick={this.getMovieData}
+                  type="primary">Retry</Button>
               </div>
             </Col>
             }
