@@ -1,4 +1,6 @@
 import React from 'react';
+import Header from './MemeGeneratore';
+import MemeGenerator from './Header';
 import { Stage, Layer, Rect, Image } from 'react-konva';
 import Konva from 'konva';
 import './App.css';
@@ -49,20 +51,15 @@ class URLImage extends React.Component {
     this.image.removeEventListener('load', this.handleLoad);
   }
   loadImage() {
-    // save to "this" to remove "load" handler on unmount
     this.image = new window.Image();
     this.image.src = this.props.src;
     this.image.addEventListener('load', this.handleLoad);
   }
   handleLoad = () => {
-    // after setState react-konva will update canvas and redraw the layer
-    // because "image" property is changed
+   
     this.setState({
       image: this.image,
     });
-    // if you keep same image object during source updates
-    // you will have to update layer manually:
-    // this.imageNode.getLayer().batchDraw();
   };
   render() {
     return (
@@ -87,7 +84,7 @@ function App() {
 
   return (
     <div>
-      <Row style={{}}>
+      {/* <Row style={{}}>
         <Col span={24} style={{ display: 'flex', justifyContent: 'center' }}>
           <Title level={1}>
             Meme generator
@@ -99,9 +96,11 @@ function App() {
               <URLImage src="https://konvajs.org/assets/yoda.jpg" x={150} />
             </Layer>
           </Stage>
-          {/* <ColoredRect/> */}
+          <ColoredRect/>
         </Col>
-      </Row>
+      </Row> */}
+      <Header />
+      <MemeGenerator />
     </div>
   );
 }
