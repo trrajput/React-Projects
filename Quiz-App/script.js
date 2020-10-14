@@ -104,4 +104,13 @@ const questions = [
      { text: 'June ', correct: false }
    ]
  },
+ {
+   question: '2+2= ?',
+   answers: [
+     { text: '1', correct: false },
+     { text: '4', correct: true },
+     { text: '2', correct: false },
+     { text: '0 ', correct: false }
+   ]
+ },
 ]
