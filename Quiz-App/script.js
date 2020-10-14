@@ -105,12 +105,21 @@ const questions = [
    ]
  },
  {
-   question: '2+2= ?',
+   question: 'PNG is a ?',
    answers: [
-     { text: '1', correct: false },
-     { text: '4', correct: true },
-     { text: '2', correct: false },
-     { text: '0 ', correct: false }
+     { text: 'internet format', correct: false },
+     { text: 'image format', correct: true },
+     { text: 'file format', correct: false },
+     { text: 'html format ', correct: false }
+   ]
+ },
+ {
+   question: ' OSI stands for?',
+   answers: [
+     { text: ' Open Source Index', correct: false },
+     { text: 'Open Source Initiative', correct: true },
+     { text: 'Open Source Image', correct: false },
+     { text: 'Open Source Instant', correct: false }
    ]
  },
 ]
