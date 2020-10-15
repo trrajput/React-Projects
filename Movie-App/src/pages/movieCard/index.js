@@ -26,7 +26,7 @@ export class index extends Component {
         movieList: data,
         loading: false,
       }, () => {
-        console.log("Movies list from API==>", this.state.movieList)
+        console.log("Movies list from API==>", this.state.movieListt)
       })
     }).catch(e => {
       this.setState(
@@ -34,7 +34,7 @@ export class index extends Component {
           error: true,
           loading: false
         })
-      console.log("Error here", e);
+      console.log("Error", e);
     });
   }
 
