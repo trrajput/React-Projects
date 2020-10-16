@@ -26,7 +26,7 @@ export class index extends Component {
         movieList: data,
         loading: false,
       }, () => {
-        console.log("Movies list from API==>", this.state.movieListt)
+        console.log("Movies list from API==>", this.state.movieList)
       })
     }).catch(e => {
       this.setState(
