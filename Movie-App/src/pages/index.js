@@ -1,5 +1,5 @@
 import styles from './index.css';
-//import MovieInfo from './movie';
+//import MovieInfo from './movieCard/moviecard';
 import MovieCard from './movieCard/index';
 
 export default function() {
