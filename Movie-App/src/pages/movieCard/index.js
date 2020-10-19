@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+
 import {Row, Col, Card, Rate, Spin, Button} from 'antd';
 import {getMovies, IMAGE_PATH} from '@/api'
 
@@ -81,6 +82,7 @@ export class index extends Component {
                 alignItems: 'center',
                 justifyContent: 'center',
                 height: '100vh',
+
                 width: '100%',
                 zIndex: 100
               }}>

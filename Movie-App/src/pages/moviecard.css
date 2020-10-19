@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+/*@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
 
 * {
     box-sizing: border-box;
@@ -105,4 +105,29 @@ main {
 
 .movie:hover .overview {
     transform: translateY(0);
+}
+.space-align-block{
+    display: flex;
+  align-item: flex-start;
+  flex-wrap: wrap;display: flex;
+  align-item: flex-start;
+  flex-wrap: wrap;
+}
+.card-detail li + li:before {
+    content: "/";
+}*/
+.movieHeader {
+    /*background-color: #373b69;*/
+    padding-top: 1rem;
+    color: #424242;
+    font: 24px Arial,sans-serif;
+    font-weight: normal;
+}
+.movieTitle {
+    color: #373b69;
+    font-weight: bold;
+
+}
+.movieContent{
+    font-weight: normal;
 }
