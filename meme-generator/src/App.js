@@ -1,6 +1,6 @@
 import React from 'react';
-import Header from './MemeGeneratore';
-import MemeGenerator from './Header';
+import MemeGenerator from './MemeGeneratore';
+import Header from './Header';
 import { Stage, Layer, Rect, Image } from 'react-konva';
 import Konva from 'konva';
 import './App.css';
