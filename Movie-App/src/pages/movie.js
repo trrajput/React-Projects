@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Row, Col, Card, Icon,PageHeader,Modal, Button } from 'antd';
+import { Row, Col, Card, Icon, PageHeader, Modal, Button } from 'antd';
 const { Meta } = Card;
 class movie extends React.Component {
   state = { visible: false };
@@ -36,12 +36,14 @@ class movie extends React.Component {
           onOk={this.handleOk}
           onCancel={this.handleCancel}
         >
-           <Card
-    hoverable
-    cover={<img alt="example" src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png" />}
-  >
-    <Meta title="Europe Street beat" description="www.instagram.com" />
-  </Card>
+          <Card
+            hoverable
+            cover={
+              <img alt="example" src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png" />
+            }
+          >
+            <Meta title="Europe Street beat" description="www.instagram.com" />
+          </Card>
         </Modal>
       </>
     );
