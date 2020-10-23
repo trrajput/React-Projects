@@ -7,7 +7,10 @@ export default {
       path: '/',
       // component: '../layouts/index',
       routes: [
+
         { path: '/', component: '../pages/index' },
+        //{ path: '/modal', component: '@/pages/modal' },
+
       ]
     }
   ],

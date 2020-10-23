@@ -1,0 +1,122 @@
+[
+  {
+    "question": "What command is used to count the total number of lines, words, and characters contained in a file?",
+    "options": {
+      "A": "countw",
+      "B": "wcount",
+      "C": "wc",
+      "D": "count p"
+    },
+    "answer": "C"
+  },
+  {
+    "question": "What command is used to remove files?",
+    "options": {
+      "A": "dm",
+      "B": "rm",
+      "C": "delete",
+      "D": "erase"
+    },
+    "answer": "B"
+  },
+  {
+    "question": "What command is used to remove the directory?",
+    "options": {
+      "A": "rdir",
+      "B": "remove",
+      "C": "rd",
+      "D": "rmdir"
+    },
+    "answer": "D"
+  },
+  {
+    "question": "What command is used with vi editor to delete a single character?",
+    "options": {
+      "A": "x",
+      "B": "y",
+      "C": "a",
+      "D": "z"
+    },
+    "answer": "A"
+  },
+  {
+    "question": "What hardware architectures are not supported by Red Hat?",
+    "options": {
+      "A": "SPARC",
+      "B": "IBM-compatible",
+      "C": "Alpha",
+      "D": "Macintosh"
+    },
+    "answer": "D"
+  },
+  {
+    "question": "The physical layer of a network",
+    "options": {
+      "A": "constructs packets of data and sends them across the network",
+      "B": "controls error detection and correction",
+      "C": "defines the electrical characteristics of signals passed between the computer and communication devices",
+      "D": "All of the above"
+    },
+    "answer": "C"
+  },
+  {
+    "question": "What TCP/IP protocol is used for remote terminal connection service?",
+    "options": {
+      "A": "UDP",
+      "B": "RARP",
+      "C": "FTP",
+      "D": "TELNET"
+    },
+    "answer": "D"
+  },
+  {
+    "question": "How many networks and nodes per network, are allowed by the Class B network?",
+    "options": {
+      "A": "127 networks and 16,777,216 nodes per network",
+      "B": "16,384 networks and 65,534 nodes per network",
+      "C": "2,097,152 networks and 254 nodes per network",
+      "D": "All of the above"
+    },
+    "answer": "B"
+  },
+  {
+    "question": "What service is used to translate domain names to IP addresses?",
+    "options": {
+      "A": "NFS",
+      "B": "SMB",
+      "C": "NIS",
+      "D": "DNS"
+    },
+    "answer": "D"
+  },
+  {
+    "question": "Which of the following command is used to create a Linux installation boot floppy?",
+    "options": {
+      "A": "mkboot disk",
+      "B": "bootfp disk",
+      "C": "ww and rawwrite",
+      "D": "dd and rawrite"
+    },
+    "answer": "D"
+  },
+  {
+    "question": "How can you add Amit, a new user, to your system?",
+    "options": {
+      "A": "Using useradd",
+      "B": "Using adduser",
+      "C": "Using linuxconf",
+      "D": "All of the above"
+    },
+    "answer": "D"
+  },
+  {
+    "question": "What does FSF stand for?",
+    "options": {
+      "A": "Free Software File",
+      "B": "File Server First",
+      "C": "First Serve First",
+      "D": "Free Software Foundation"
+    },
+    "answer": "D"
+  }
+]
