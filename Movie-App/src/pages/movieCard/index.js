@@ -28,7 +28,7 @@ export class index extends Component {
             loading: false,
           },
           () => {
-            console.log('Movies list from API ==>', this.state.movieList);
+            console.log('Movies list from API==>', this.state.movieList);
           },
         );
       })
