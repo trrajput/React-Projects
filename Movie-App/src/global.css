@@ -4,5 +4,14 @@ html, body, #root {
 
 body {
   margin: 0;
-  background-color: black;
+  background-color: #1E1F33;
+  color: aliceblue !important;
+}
+
+.ant-card-meta-title{
+  color: #fff !important;
+}
+
+.ant-typography-ellipsis-multiple-line{
+  color: #fff !important;
 }
