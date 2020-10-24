@@ -126,8 +126,11 @@ main {
 .movieTitle {
     color: #373b69;
     font-weight: bold;
+   /* padding-left: 5px;*/
 
 }
 .movieContent{
     font-weight: normal;
+}
+.additional{
 }
