@@ -29,3 +29,11 @@
   justify-content: center;
   padding: 16px;
 }
+
+.ant-card-meta-title{
+  color: #fff !important;
+}
+
+.ant-typography-ellipsis-multiple-line{
+  color: #fff !important;
+}
