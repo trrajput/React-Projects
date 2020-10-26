@@ -46,6 +46,7 @@ function App(props) {
       <main>
         <Switch>
           <Route path="/" component={Home} exact />
+          
           <Route path="/add-recipe" component={AddRecipe} />
           {/* <Route path="/shop" component={Shop} /> */}
         </Switch>
